@@ -17,4 +17,8 @@ Available states
 ``syslog``
 ------------
 
-Install and configure the ``syslog`` package and enable the service.
+Install and configure the default syslog package and enable the service.
+
+TODO:
+ - Filter on RHEL5/6 for syslog/rsyslog
+ - Add default config templates for RHEL5, RHEL6
