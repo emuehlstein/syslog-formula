@@ -1,8 +1,8 @@
-rsyslog-formula
+syslog-formula
 ===============
 
-Configures and starts rsyslog service. Currently the log file schema is based on the debian default. The formula allows
-control if rsyslog should listen for tcp / udp connections. Further ikml logging (kernel) logging can be disabled, e.g. for lxc containers and logs can be redirected to an other server.
+Configures and starts syslog service. Currently the log file schema is based on the debian default. The formula allows
+control if syslog should listen for tcp / udp connections. Further ikml logging (kernel) logging can be disabled, e.g. for lxc containers and logs can be redirected to an other server.
 
 .. note::
 
@@ -14,7 +14,7 @@ Available states
 .. contents::
     :local:
 
-``rsyslog``
+``syslog``
 ------------
 
-Install and configure the ``rsyslog`` package and enable the service.
+Install and configure the ``syslog`` package and enable the service.

@@ -1,4 +1,4 @@
-rsyslog:
+syslog:
   target: 192.168.100.1         # omit if you do not want to forward logs
                                 # NOTE: be careful using target and listen on
                                 # the same server, you can cause a loop

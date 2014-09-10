@@ -1,23 +1,23 @@
-{% from "rsyslog/map.jinja" import rsyslog with context %}
+{% from "syslog/map.jinja" import syslog with context %}
 
-package_{{ rsyslog.package }}:
+package_{{ syslog.package }}:
   pkg:
-    - name: {{ rsyslog.package }}
+    - name: {{ syslog.package }}
     - installed
 
-service_{{ rsyslog.service }}:
+service_{{ syslog.service }}:
   service.running:
-    - name: {{ rsyslog.service }}
+    - name: {{ syslog.service }}
     - enable: True
     - require:
-      - pkg: package_{{ rsyslog.package }}
+      - pkg: package_{{ syslog.package }}
     - watch:
-      - file: config_{{ rsyslog.config }}
+      - file: config_{{ syslog.config }}
 
-config_{{ rsyslog.config }}:
+config_{{ syslog.config }}:
   file.managed:
-    - name: /etc/rsyslog.conf
+    - name: /etc/syslog.conf
     - template: jinja
-    - source: salt://rsyslog/files/rsyslog.conf.jinja
+    - source: salt://syslog/files/syslog.conf.jinja
     - context:
-      config: {{ salt['pillar.get']('rsyslog', {}) }}
+      config: {{ salt['pillar.get']('syslog', {}) }}
