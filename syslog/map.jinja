@@ -2,10 +2,11 @@
     'Debian': {
         'package': 'rsyslog',
         'service': 'rsyslog',
-        'config': '/etc/syslog.conf'
+        'config': '/etc/rsyslog.conf'
     },
     'RedHat': {
         'package': 'rsyslog',
         'service': 'rsyslog',
+	'config': '/etc/rsyslog.conf'
     },
 }, merge=salt['pillar.get']('syslog:lookup')) %}
